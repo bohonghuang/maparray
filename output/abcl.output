@@ -1,0 +1,35 @@
+(map-array-displace)
+-          SAMPLES  TOTAL   MINIMUM  MAXIMUM  MEDIAN  AVERAGE  DEVIATION  
+REAL-TIME  100      45.273  0.435    0.678    0.446   0.45273  0.027099   
+RUN-TIME   100      45.272  0.435    0.678    0.446   0.45272  0.0271     
+
+
+(map-array-cons)
+-          SAMPLES  TOTAL   MINIMUM  MAXIMUM  MEDIAN  AVERAGE  DEVIATION  
+REAL-TIME  100      13.138  0.105    0.159    0.131   0.13138  0.011895   
+RUN-TIME   100      13.14   0.105    0.159    0.131   0.1314   0.011906   
+
+
+(map-array-struct-alloc)
+-          SAMPLES  TOTAL   MINIMUM  MAXIMUM  MEDIAN  AVERAGE  DEVIATION  
+REAL-TIME  100      20.197  0.181    0.324    0.194   0.20197  0.02467    
+RUN-TIME   100      20.197  0.181    0.324    0.194   0.20197  0.024677   
+
+
+(map-array-struct-setf)
+-          SAMPLES  TOTAL   MINIMUM  MAXIMUM  MEDIAN  AVERAGE  DEVIATION  
+REAL-TIME  100      23.14   0.209    0.3      0.224   0.2314   0.01957    
+RUN-TIME   100      23.142  0.209    0.3      0.224   0.23142  0.019586   
+
+
+(map-array-macro)
+-          SAMPLES  TOTAL   MINIMUM  MAXIMUM  MEDIAN  AVERAGE  DEVIATION  
+REAL-TIME  100      13.574  0.111    0.159    0.135   0.13574  0.010751   
+RUN-TIME   100      13.575  0.111    0.159    0.135   0.13575  0.010761   
+
+
+(map-array-offset)
+-          SAMPLES  TOTAL   MINIMUM  MAXIMUM  MEDIAN  AVERAGE  DEVIATION  
+REAL-TIME  100      13.025  0.108    0.234    0.131   0.13025  0.013752   
+RUN-TIME   100      13.026  0.108    0.234    0.131   0.13026  0.013758   
+NIL

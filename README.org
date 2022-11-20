@@ -1,10 +1,10 @@
 To load the system and run the tests, eval ~(asdf:load-system :maparray)~ and ~(maparray:main)~ in your Lisp REPL.
 * Test Results
-The time (in secs) taken by different implementations for each test  (less is better): 
+The time (in secs) taken by different implementations for repeating each test 100 times  (less is better): 
 
-| Implementation          | ~displace~ |  ~cons~ | ~struct-alloc~ | ~struct-setf~ | ~macro~ | ~offset~ |
-|-------------------------+----------+-------+--------------+-------------+-------+--------|
-| SBCL 2.2.9              |    1.006 | 0.146 |        0.226 |       0.153 | 0.146 |  0.120 |
-| ECL 21.2.1              |    0.935 | 0.245 |        1.383 |       0.240 | 0.044 |  0.045 |
-| CCL 1.12.1              |    7.162 | 0.575 |        0.660 |       0.227 | 0.226 |  1.341 |
-| ABCL 1.9.0 (OpenJDK 17) |    9.672 | 0.692 |        1.735 |       2.222 | 0.782 |  0.734 |
+| Implementation          | ~displace~ |   ~cons~ | ~struct-alloc~ | ~struct-setf~ |  ~macro~ | ~offset~ |
+|-------------------------+----------+--------+--------------+-------------+--------+--------|
+| SBCL 2.2.9              |    6.826 |  0.890 |        0.923 |       0.960 |  0.906 |  0.793 |
+| ECL 21.2.1              |    5.978 |  1.699 |        8.019 |       1.668 |  0.421 |  0.324 |
+| CCL 1.12.1              |   31.603 |  3.833 |        5.501 |       1.409 |  1.374 |  8.328 |
+| ABCL 1.9.0 (OpenJDK 17) |   45.273 | 13.138 |       20.197 |       23.14 | 13.574 | 13.025 |

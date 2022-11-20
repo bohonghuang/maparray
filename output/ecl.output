@@ -1,0 +1,40 @@
+(map-array-displace)
+-             SAMPLES  TOTAL       MINIMUM   MAXIMUM   MEDIAN    AVERAGE     DEVIATION  
+REAL-TIME     100      5.978       0.056     0.07      0.059     0.05978     0.002859   
+RUN-TIME      100      7.23        0.062     0.081     0.072     0.0723      0.003254   
+BYTES-CONSED  100      8388632448  83880240  83892208  83886208  83886330.0  2659.383   
+
+
+(map-array-cons)
+-             SAMPLES  TOTAL       MINIMUM   MAXIMUM   MEDIAN    AVERAGE     DEVIATION  
+REAL-TIME     100      1.699       0.015     0.025     0.017     0.01699     0.001127   
+RUN-TIME      100      1.954       0.015     0.022     0.02      0.01954     0.001043   
+BYTES-CONSED  100      1677741760  16777216  16781184  16777216  16777418.0  822.7268   
+
+
+(map-array-struct-alloc)
+-             SAMPLES  TOTAL        MINIMUM    MAXIMUM    MEDIAN     AVERAGE      DEVIATION  
+REAL-TIME     100      8.019        0.076      0.086      0.08       0.08019      0.002023   
+RUN-TIME      100      8.851        0.077      0.102      0.089      0.08851      0.003931   
+BYTES-CONSED  100      10066345776  100660608  100668320  100663680  100663456.0  1787.298   
+
+
+(map-array-struct-setf)
+-             SAMPLES  TOTAL       MINIMUM   MAXIMUM   MEDIAN    AVERAGE     DEVIATION  
+REAL-TIME     100      1.668       0.015     0.018     0.017     0.01668     0.000719   
+RUN-TIME      100      1.935       0.015     0.022     0.019     0.01935     0.001143   
+BYTES-CONSED  100      1677746880  16777232  16781072  16777232  16777468.0  872.97266  
+
+
+(map-array-macro)
+-             SAMPLES  TOTAL       MINIMUM   MAXIMUM   MEDIAN    AVERAGE     DEVIATION  
+REAL-TIME     100      0.421       0.002     0.009     0.004     0.00421     0.000993   
+RUN-TIME      100      0.648       0.002     0.009     0.007     0.00648     0.00178    
+BYTES-CONSED  100      1677740944  16777216  16781264  16777216  16777410.0  845.5181   
+
+
+(map-array-offset)
+-             SAMPLES  TOTAL       MINIMUM   MAXIMUM   MEDIAN    AVERAGE     DEVIATION  
+REAL-TIME     100      0.324       0.002     0.008     0.003     0.00324     0.001209   
+RUN-TIME      100      0.461       0         0.009     0.006     0.00461     0.002383   
+BYTES-CONSED  100      1677742736  16777216  16781296  16777216  16777428.0  845.96674  

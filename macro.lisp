@@ -2,7 +2,7 @@
 
 (defmacro mem-array (size &optional origin offset)
   `(make-array ,size
-               :element-type '(unsigned-byte 32)
+               :element-type 'fixnum
                ,@(if origin
                      `(:displaced-to
                        ,origin

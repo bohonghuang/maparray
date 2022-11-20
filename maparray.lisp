@@ -2,10 +2,10 @@
 
 (declaim (inline make-arraymap arraymap-a arraymap-offset))
 (defstruct arraymap
-  (a * :type (simple-array (unsigned-byte 32) (*)))
-  (offset 0 :type (unsigned-byte 32)))
+  (a * :type (simple-array fixnum (*)))
+  (offset 0 :type fixnum))
 
-(defconstant +array-length+ (* 1024 1024 16 4))
+(defconstant +array-length+ (* 1024 1024 4))
 
 (defun map-array-displace ()
   (let ((a (mem-array (the fixnum +array-length+))))
@@ -18,7 +18,7 @@
 (defun map-array-cons ()
   (let* ((a (mem-array (the fixnum (the fixnum +array-length+))))
          (map (cons a 0)))
-    (declare (type (cons (simple-array (unsigned-byte 32) (*)) (unsigned-byte 32)) map))
+    (declare (type (cons (simple-array fixnum (*)) fixnum) map))
     (dotimes (i (the fixnum (truncate (length a) 4)))
       (setf (cdr map) (the fixnum (* i 4)))
       (dotimes (i 4)
@@ -69,25 +69,31 @@
 
 (defun main ()
   (tg:gc :full t)
-  (format t "~%~%(time (map-array-displace))~%")
-  (princ (time (map-array-displace)))
+  (format t "~%~%(map-array-displace)~%")
+  (trivial-benchmark:with-timing (100)
+    (map-array-displace))
 
   (tg:gc :full t)
-  (format t "~%~%(time (map-array-cons))~%")
-  (princ (time (map-array-cons)))
+  (format t "~%~%(map-array-cons)~%")
+  (trivial-benchmark:with-timing (100)
+    (map-array-cons))
 
   (tg:gc :full t)
-  (format t "~%~%(time (map-array-struct-alloc))~%")
-  (princ (time (map-array-struct-alloc)))
+  (format t "~%~%(map-array-struct-alloc)~%")
+  (trivial-benchmark:with-timing (100)
+    (map-array-struct-alloc))
 
   (tg:gc :full t)
-  (format t "~%~%(time (map-array-struct-setf))~%")
-  (princ (time (map-array-struct-setf)))
+  (format t "~%~%(map-array-struct-setf)~%")
+  (trivial-benchmark:with-timing (100)
+    (map-array-struct-setf))
 
   (tg:gc :full t)
-  (format t "~%~%(time (map-array-macro))~%")
-  (princ (time (map-array-macro)))
+  (format t "~%~%(map-array-macro)~%")
+  (trivial-benchmark:with-timing (100)
+    (map-array-macro))
 
   (tg:gc :full t)
-  (format t "~%~%(time (map-array-offset))~%")
-  (princ (time (map-array-offset))))
+  (format t "~%~%(map-array-offset)~%")
+  (trivial-benchmark:with-timing (100)
+    (map-array-offset)))

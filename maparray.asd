@@ -26,4 +26,4 @@
                (:file "maparray" :depends-on ("macro")))
   :build-pathname "maparray"
   :entry-point "maparray:main"
-  :depends-on (:asdf :trivial-garbage))
+  :depends-on (#:asdf #:trivial-garbage #:trivial-benchmark))
