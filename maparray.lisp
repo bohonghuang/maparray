@@ -30,7 +30,8 @@
     (dotimes (i (the fixnum (truncate (length a) 4)))
       (let ((map #+ecl (si:make-structure 'arraymap a (the fixnum (* i 4)))
                  #-ecl (make-arraymap :a a :offset (the fixnum (* i 4)))))
-        (declare (type arraymap map))
+        (declare (type arraymap map)
+                 (dynamic-extent map))
         (dotimes (i 4)
           (setf (aref #+ecl (si:structure-ref map 'arraymap 0) #-ecl (arraymap-a map)
                       (+ (the fixnum #+ecl (si:structure-ref map 'arraymap 1) #-ecl (arraymap-offset map)) i))
@@ -39,7 +40,7 @@
 
 (defun map-array-struct-setf ()
   (let* ((a (mem-array (the fixnum (the fixnum +array-length+))))
-         (map #+ecl (si:make-structure (find-class 'arraymap) a 0)
+         (map #+ecl (si:make-structure 'arraymap a 0)
               #-ecl (make-arraymap :a a :offset 0)))
     (declare (type arraymap map)
              (dynamic-extent map))

@@ -1,0 +1,29 @@
+(time (map-array-displace))
+9.672 seconds real time
+50331654 cons cells
+#(2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1)
+
+(time (map-array-cons))
+0.692 seconds real time
+7 cons cells
+#(2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1)
+
+(time (map-array-struct-alloc))
+1.735 seconds real time
+6 cons cells
+#(2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1)
+
+(time (map-array-struct-setf))
+2.222 seconds real time
+6 cons cells
+#(2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1)
+
+(time (map-array-macro))
+0.782 seconds real time
+6 cons cells
+#(2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1)
+
+(time (map-array-offset))
+0.734 seconds real time
+6 cons cells
+#(2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1)

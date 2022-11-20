@@ -8,7 +8,6 @@
                        ,origin
                        :displaced-index-offset ,offset))))
 
-;; -------------code walker--------------------
 (defun replace-refm (tree map-name array-name offset-name)
   "Offset: symbol"
   (if (consp tree)
