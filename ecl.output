@@ -1,44 +1,41 @@
-;;; Loading "/home/leo/learning/arraymap/maparray.lisp"
-
-
 (time (map-array-displace))
-real time : 4.546 secs
-run time  : 4.627 secs
-gc count  : 20 times
-consed    : 738207104 bytes
+real time : 0.993 secs
+run time  : 0.979 secs
+gc count  : 29 times
+consed    : 1342181824 bytes
 #(2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1)
 
 (time (map-array-cons))
-real time : 4.966 secs
-run time  : 5.033 secs
-gc count  : 16 times
-consed    : 603980112 bytes
+real time : 0.249 secs
+run time  : 0.247 secs
+gc count  : 1 times
+consed    : 268435456 bytes
 #(2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1)
 
 (time (map-array-struct-alloc))
-real time : 12.307 secs
-run time  : 12.447 secs
-gc count  : 33 times
-consed    : 1207967088 bytes
+real time : 1.306 secs
+run time  : 1.380 secs
+gc count  : 34 times
+consed    : 1610610304 bytes
 #(2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1)
 
 (time (map-array-struct-setf))
-real time : 5.770 secs
-run time  : 5.843 secs
-gc count  : 16 times
-consed    : 603983184 bytes
+real time : 0.344 secs
+run time  : 0.297 secs
+gc count  : 1 times
+consed    : 268435472 bytes
 #(2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1)
 
 (time (map-array-macro))
-real time : 4.319 secs
-run time  : 4.350 secs
-gc count  : 8 times
-consed    : 335547696 bytes
+real time : 0.032 secs
+run time  : 0.031 secs
+gc count  : 1 times
+consed    : 268435456 bytes
 #(2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1)
 
 (time (map-array-offset))
-real time : 2.443 secs
-run time  : 2.440 secs
+real time : 0.037 secs
+run time  : 0.038 secs
 gc count  : 1 times
-consed    : 67108864 bytes
+consed    : 268435456 bytes
 #(2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1)
