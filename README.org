@@ -1,0 +1,9 @@
+To load the system and run the tests, eval ~(asdf:load-system :maparray)~ and ~(maparray:main)~ in your Lisp REPL.
+* Test Results
+The time (in secs) taken by different implementations for each test  (less is better): 
+
+| Implementation | ~map-array-displace~ | ~map-array-cons~ | ~map-array-struct-alloc~ | ~map-array-struct-setf~ | ~map-array-macro~ | ~map-array-offset~ |
+|----------------+--------------------+----------------+------------------------+-----------------------+-----------------+------------------|
+| SBCL 2.2.9     |              1.006 |          0.146 |                  0.226 |                 0.153 |           0.146 |            0.120 |
+| ECL 21.2.1     |              0.979 |          0.247 |                  1.380 |                 0.297 |           0.031 |            0.038 |
+| CCL 1.12.1     |              7.162 |          0.575 |                  0.660 |                 0.227 |           0.226 |            1.341 |
