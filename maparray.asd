@@ -2,6 +2,9 @@
 (defmethod asdf:perform ((o asdf:image-op) (c asdf:system))
   (uiop:dump-image (asdf:output-file o c) :executable t :compression t))
 
+#+(and ecl linux x86_64)
+(setf c::*cc-flags* "    -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -march=native -O3 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto -fcommon -ffat-lto-objects -fPIC -D_THREAD_SAFE -Dlinux")
+
 (defsystem maparray
   :version "1.0.0"
   :author "Bohong Huang <1281299809@qq.com>"
