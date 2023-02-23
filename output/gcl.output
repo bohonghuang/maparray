@@ -1,0 +1,35 @@
+(map-array-displace)
+real time       :     18.760 secs
+run-gbc time    :     14.570 secs
+child run time  :      0.000 secs
+gbc time        :      1.920 secs
+
+(map-array-cons)
+real time       :      4.240 secs
+run-gbc time    :      3.450 secs
+child run time  :      0.000 secs
+gbc time        :      0.000 secs
+
+(map-array-struct-alloc)
+real time       :      8.810 secs
+run-gbc time    :      6.300 secs
+child run time  :      0.000 secs
+gbc time        :      0.460 secs
+
+(map-array-struct-setf)
+real time       :      4.470 secs
+run-gbc time    :      3.670 secs
+child run time  :      0.000 secs
+gbc time        :      0.000 secs
+
+(map-array-macro)
+real time       :      3.830 secs
+run-gbc time    :      3.040 secs
+child run time  :      0.000 secs
+gbc time        :      0.000 secs
+
+(map-array-offset)
+real time       :      3.000 secs
+run-gbc time    :      2.200 secs
+child run time  :      0.000 secs
+gbc time        :      0.000 secs
